@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switch Mode Couleurs</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
 </head>
-<nav class="color1">
-    <a class="logo" href="#">EspritWebApprenti</a>
-    <ul>
-        <a href="#">Home12344444</a>
-        <div class="menu-switchmode">
-            <a class="switchmode">Switch Mode</a>
-            <ul class="content color1">
-                <div class="sous-content1">
-                    <div class="couleur1 couleurs"></div>
-                    <div class="couleur2 couleurs"></div>
-                    <div class="couleur3 couleurs"></div>
-                    <div class="couleur4 couleurs"></div>
-                </div>
-                <div class="sous-content2">
-                    <div class="couleur5 couleurs"></div>
-                    <div class="couleur6 couleurs"></div>
-                    <div class="couleur7 couleurs"></div>
-                    <div class="couleur8 couleurs"></div>
-                </div>
-            </ul>
-        </div>
-        <a href="#">A propos</a>
-    </ul>
-</nav>
-<body class="color1">
+<body>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				What's up, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+			<form id="new-todo-form">
+				<h4>What's on your todo?</h4>
+				<input 
+					type="text" 
+					placeholder="e.g. Get some milk"
+					name="content"
+					id="content" />
+				
+				<h4>Pick a category</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div>Business</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
 
-    <section class="texte">
-        <h1 class="changez">Changez</h1><h1 class="changezsuite">les <span class="thèmes color2_span">Thèmes</span> de votre page !</h1>
-        <p>Expérience utilisateur incroyable et inoubliable !</p>
-        <p>Il te suffit de survoler dans le menu sur l'onglet "Switch Mode".</p>
-        <button class="bouton1 color4">Survole sur Switch Mode</button>
-        <button class="bouton2 color2 color2_texte">En haut à droite</button>
-    </section>
+				<input type="submit" value="Add todo" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
 
-    <section class="boxes">
-        <div class="item1 box color4"></div>
-        <div class="item2 box color3"></div>
-        <div class="item3 box color4"></div>
-        <div class="item4 box color2"></div>
-        <div class="item5 box color4"></div>
-        <div class="item6 box"></div>
-        <div class="item7 box"></div>
-        <div class="item8 box color4"></div>
-        <div class="item9 box color3"></div>
-        <div class="item10 box color2"></div>
-        <div class="item11 box"></div>
-    </section>
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>TODO LIST</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
 
-    <script src="js/main.js"></script>
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
 </body>
 </html>
-
